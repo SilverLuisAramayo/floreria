@@ -5,11 +5,10 @@ import { useRouter } from "next/navigation";
 function HomePage ({params}){
     const [newCategoria,setNewCategoria]=useState({
         categoria:"",
-        orden:'1'
+        orden:'1',
     });
 
     const router = useRouter();
-    //const params = useParams();
 
     const getCategoria = async ()=>{
         const res = await fetch(`/api/categoria/${params.id}`);
@@ -21,7 +20,7 @@ function HomePage ({params}){
         })
     }
     const handleDelete=async()=>{
-        //console.log();
+   
         if(window.confirm(`Esta seguro de eliminar la categoria ${newCategoria.categoria}`)){
             try {
                 const res=await fetch(`/api/categoria/${params.id}`,{
