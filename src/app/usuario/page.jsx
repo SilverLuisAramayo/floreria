@@ -20,7 +20,6 @@ import {
 
 export const feachUsuarios=()=>{
    return fetch('http://localhost:3000/api/usuario',{ cache: 'no-store'} )
-   //return fetch('https://jsonplaceholder.typicode.com/posts')
    .then(res=>res.json());
 }
 
@@ -43,7 +42,7 @@ export default async function Usuarios(){
                         <Card key={usuario._id}>
                             <CardHeader>
                                 <CardTitle>{usuario.nombre}</CardTitle>
-                                <CardDescription>Usuario:"{usuario.usuario}"</CardDescription>
+                                <CardDescription>Usuario:{usuario.usuario}</CardDescription>
                             </CardHeader>
                             <CardFooter className="grid grid-cols-2 grid-flow-row gap-4">
                                         <Link href={`/usuario/${usuario._id}/delete`}>
