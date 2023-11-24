@@ -6,7 +6,7 @@ function HomePage ({params}){
     const [newCategoria,setNewCategoria]=useState({
         categoria:"",
         orden:'1',  
-    });
+    },[]);
 
     const router = useRouter();
 
