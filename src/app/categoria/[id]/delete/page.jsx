@@ -38,7 +38,7 @@ function HomePage ({params}){
 
     useEffect(()=>{
         getCategoria()
-    },[getCategoria])
+    },)
 
 return(
     <div>
