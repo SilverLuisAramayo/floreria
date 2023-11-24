@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 function HomePage ({params}){
     const [newCategoria,setNewCategoria]=useState({
         categoria:"",
-        orden:'1',
+        orden:'1',  
     });
 
     const router = useRouter();
