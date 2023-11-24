@@ -6,7 +6,7 @@ function HomePage ({params}){
     const [newCategoria,setNewCategoria]=useState({
         categoria:"",
         orden:'1',  
-    },[]);
+    },);
 
     const router = useRouter();
 
@@ -38,7 +38,7 @@ function HomePage ({params}){
 
     useEffect(()=>{
         getCategoria()
-    },[])
+    },[getCategoria])
 
 return(
     <div>
